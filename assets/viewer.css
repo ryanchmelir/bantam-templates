@@ -1,0 +1,202 @@
+/* Reset and base styles */
+:root {
+  --bantam-primary: #0066FF;
+  --bantam-gray-100: #f8f9fa;
+  --bantam-gray-200: #e9ecef;
+  --bantam-gray-300: #dee2e6;
+  --bantam-gray-600: #6c757d;
+  --bantam-gray-800: #343a40;
+  --bantam-radius: 8px;
+  --bantam-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  color: var(--bantam-gray-800);
+  background: var(--bantam-gray-100);
+}
+
+/* Common components */
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: var(--bantam-radius);
+  background: white;
+  border: 1px solid var(--bantam-gray-300);
+  color: var(--bantam-gray-800);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  border-color: var(--bantam-primary);
+  color: var(--bantam-primary);
+}
+
+.button.primary {
+  background: var(--bantam-primary);
+  border-color: var(--bantam-primary);
+  color: white;
+}
+
+.button.primary:hover {
+  opacity: 0.9;
+}
+
+/* Single file viewer */
+.bantam-viewer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.bantam-viewer header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding: 24px;
+  background: white;
+  border-radius: var(--bantam-radius);
+  box-shadow: var(--bantam-shadow);
+}
+
+.file-info h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.meta {
+  display: flex;
+  gap: 16px;
+  color: var(--bantam-gray-600);
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.preview-area {
+  background: white;
+  border-radius: var(--bantam-radius);
+  box-shadow: var(--bantam-shadow);
+  padding: 24px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-area img,
+.preview-area iframe {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: var(--bantam-radius);
+}
+
+.icon-preview {
+  padding: 48px;
+}
+
+.icon-preview img {
+  width: 64px;
+  height: 64px;
+  opacity: 0.5;
+}
+
+/* File browser */
+.bantam-browser {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.breadcrumb {
+  background: white;
+  padding: 16px 24px;
+  border-radius: var(--bantam-radius);
+  box-shadow: var(--bantam-shadow);
+  margin-bottom: 24px;
+}
+
+.breadcrumb a {
+  color: var(--bantam-gray-600);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--bantam-primary);
+}
+
+.files-list {
+  background: white;
+  border-radius: var(--bantam-radius);
+  box-shadow: var(--bantam-shadow);
+}
+
+.file-entry {
+  display: grid;
+  grid-template-columns: 40px 1fr 100px 200px;
+  align-items: center;
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--bantam-gray-200);
+}
+
+.file-entry:last-child {
+  border-bottom: none;
+}
+
+.file-entry:hover {
+  background: var(--bantam-gray-100);
+}
+
+.file-entry img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.7;
+}
+
+.file-entry .name {
+  color: var(--bantam-gray-800);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.file-entry .name:hover {
+  color: var(--bantam-primary);
+}
+
+.file-entry .size,
+.file-entry .updated {
+  color: var(--bantam-gray-600);
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bantam-viewer header {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .file-entry {
+    grid-template-columns: 40px 1fr;
+    gap: 8px;
+  }
+  
+  .file-entry .size,
+  .file-entry .updated {
+    display: none;
+  }
+} 

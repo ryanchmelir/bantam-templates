@@ -1,0 +1,39 @@
+{
+  "name": "@bantam/templates",
+  "version": "1.0.0",
+  "description": "HTML templates for Bantam file viewer and browser",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "deno test",
+    "clean": "rm -rf dist",
+    "prepare": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "bantam",
+    "templates",
+    "file-viewer",
+    "file-browser"
+  ],
+  "author": "Bantam",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+} 
