@@ -15,14 +15,14 @@ HTML templates for the Bantam file viewer and browser. This package provides reu
 ### npm
 
 ```bash
-npm install @bantam/templates
+npm install @bantamhq/templates
 ```
 
 ### Deno
 
 ```typescript
 import { renderSingleFileTemplate, renderCollectionTemplate } 
-  from 'https://esm.sh/@bantam/templates@1.0.0'
+  from 'https://esm.sh/@bantamhq/templates@1.0.0'
 ```
 
 ## Usage
@@ -30,7 +30,7 @@ import { renderSingleFileTemplate, renderCollectionTemplate }
 ### Single File Template
 
 ```typescript
-import { renderSingleFileTemplate } from '@bantam/templates'
+import { renderSingleFileTemplate } from '@bantamhq/templates'
 
 const html = renderSingleFileTemplate({
   file: {
@@ -48,7 +48,7 @@ const html = renderSingleFileTemplate({
 ### Collection Template
 
 ```typescript
-import { renderCollectionTemplate } from '@bantam/templates'
+import { renderCollectionTemplate } from '@bantamhq/templates'
 
 const html = renderCollectionTemplate({
   files: [

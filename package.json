@@ -1,5 +1,5 @@
 {
-  "name": "@bantam/templates",
+  "name": "@bantamhq/templates",
   "version": "1.0.0",
   "description": "HTML templates for Bantam file viewer and browser",
   "type": "module",
